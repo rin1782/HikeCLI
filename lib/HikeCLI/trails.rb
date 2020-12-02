@@ -1,7 +1,11 @@
 class Trails
     @@all = []
+    attr_accessor :name, :location, :rating
 
-    def initialize
+    def initialize(name, location, rating)
+        @name = name
+        @location = location
+        @rating = rating
         @@all << self
     end
 
@@ -11,4 +15,3 @@ class Trails
 
 
 end
-s
