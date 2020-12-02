@@ -1,0 +1,31 @@
+git status
+
+git add .
+
+git commit -m ""
+
+git push origin master
+
+**commit as often as possible, whenever code is working or a major change was made
+like adding a class, then commit.. and in the "" put something direct pertaining to 
+what that change was like "added API class" or something
+
+cd bin
+ls 
+ls -lah       << will look in hidden folders and give all permissions, if they dont match run command below
+chmod +x run 
+
+
+
+
+Hiking trails finder app with      API
+
+//Welcome user
+//ask for a zipcode
+-return the list of all hiking trails within a certain radius
+ask for how many miles they preference and level of difficulty
+return all names of hiking trails within X miles of zipcode with level of difficulty
+
+-CLI class - deals with all things showing onto the terminal
+-API class - deals with all API things
+-Hiking class -deals with all hiking trails(level of difficulty)
