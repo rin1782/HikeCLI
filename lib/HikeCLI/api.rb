@@ -4,21 +4,13 @@ class API
         url = "https://www.mountainproject.com/data/get-routes-for-lat-lon?lat=#{lat}&lon=#{long}&key=#{key}"
         response = HTTParty.get(url)
         response.parsed_response
-        # binding.pry
         response["routes"].each do |i|
             name = i["name"]
             rating = i["rating"]
             location = i["location"].join(" ")
             Trails.new(name, location, rating)
         end
-        
-        
-        
-        
-        
-       
-
-
+        binding.pry
     end
 
 end
