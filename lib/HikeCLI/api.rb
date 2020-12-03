@@ -9,8 +9,11 @@ class API
             rating = i["rating"]
             location = i["location"].join(" ")
             Trails.new(name, location, rating)
+        
+
         end
-        binding.pry
+# binding.pry
+
     end
 
 end
