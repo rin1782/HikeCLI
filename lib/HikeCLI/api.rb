@@ -7,7 +7,7 @@ class API
         response["routes"].each do |i|
             name = i["name"]
             rating = i["rating"]
-            location = i["location"].join(" ")
+            location = i["location"].join(", ")
             Trails.new(name, location, rating)
         
 
