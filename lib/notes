@@ -30,5 +30,3 @@ return all names of hiking trails within X miles of zipcode with level of diffic
 -API class - deals with all API things
 -Hiking class -deals with all hiking trails(level of difficulty)
 
-
-name = ["routes"]["name"]["location"]["longitude"]["latitude"]["rating"]
