@@ -1,11 +1,13 @@
 class CLI
 
     def start
-        puts "Welcome to Hiking Trails!"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "**Welcome to Hiking Trails!**"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         puts "Please enter your latitude"
-        lat = gets.chomp
+        lat = gets.chomp #want to get a range here
         puts "Please enter your longitude "
-        long = gets.chomp
+        long = gets.chomp #want to accept a range here
         
         API.get_trails(lat, long)
            display_trails
@@ -19,24 +21,26 @@ class CLI
         end
 
         def display_rating_location
-            puts "Please select a trail to see rating and location or type exit"
+            puts "Please select the number of the Trail to see rating and location or type exit"
             input = gets.chomp
             exit_trails(input)
             index = input.to_i - 1
             trail = Trails.all[index]
 
             puts "Rating: #{trail.rating}"
-            puts trail.location
+            puts "Location: #{trail.location}"
             loop_trails
         end
 
         def loop_trails
-            puts "Would you like to see another trail? (y/n)"
-            input = gets.chomp
+            puts "Would you like to see another trail? (Y/N)"
+            input = gets.chomp.upcase
             if input == "y"
                 display_trails
             else
-                puts "Thanks for coming!"
+                puts "~~~~~~~~~~~~~~"
+                puts "Happy Trails!!"
+                puts "~~~~~~~~~~~~~~"
                 exit
             end
         end
