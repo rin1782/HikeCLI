@@ -9,7 +9,7 @@ class CLI
             puts "Great! Please enter longitude for your area"
         long = gets.chomp
        API.get_trails(lat, long)
-       if Trails.all == [] 
+       if Trail.all == [] 
         puts "I'm sorry, we cannot seem to find trails near you. Please enter another latitude/longitutde."
         start
        else
@@ -20,7 +20,7 @@ class CLI
     def display_trails
         puts "Great! Here is a list of local trails you may be interested in!"
             sleep 2
-        Trails.all.each.with_index(1) do |x, index|
+        Trail.all.each.with_index(1) do |x, index|
             puts "#{index} - #{x.name}"
             end
                 display_rating_location
